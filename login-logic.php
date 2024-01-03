@@ -9,5 +9,6 @@ if(login_user($email,$password)) {
 }else{
     alert('danger','You Entered wrong username or password.');
     header('Location: login.php');
+    
 }
 ?>
