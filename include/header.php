@@ -1,10 +1,7 @@
-<?php include 'include/function.php' ?>
+<?php require_once('include/function.php') ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from cartzilla.createx.studio/home-fashion-store-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Oct 2023 15:48:22 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
     <meta charset="utf-8">
@@ -279,68 +276,69 @@
                             </a><a class="navbar-tool d-none d-lg-flex" href="account-wishlist.html"><span class="navbar-tool-tooltip">Wishlist</span>
                                 <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-heart"></i></div>
                             </a>
-                            <?php if(is_logged_in()){ ?>
-                            <a class="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" href="account-orders.php">
-                                <?php }else{ ?>
+                            <?php if (is_logged_in()) { ?>
+                                <a class="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" href="account-orders.php">
+                                <?php } else { ?>
                                     <a class="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" href="#signin-modal" data-bs-toggle="modal">
                                     <?php } ?>
-                                <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-user"></i></div>
-                                <div class="navbar-tool-text ms-n3">
-                                    <?php if(is_logged_in()){ ?>
-                                    <small>Hello, <?php echo $_SESSION['user']['first_name'] ?></small>
-                                    <?php }else{ ?>
-                                        <small>Hello, Sign in</small>
+                                    <div class="navbar-tool-icon-box"><i class="navbar-tool-icon ci-user"></i></div>
+                                    <div class="navbar-tool-text ms-n3">
+                                        <?php if (is_logged_in()) { ?>
+                                            <small>Hello, <?php echo $_SESSION['user']['first_name'] ?></small>
+                                        <?php } else { ?>
+                                            <small>Hello, Sign in</small>
                                         <?php } ?>
-                                    My Account</div>
-                            </a>
-                            <div class="navbar-tool dropdown ms-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="shop-cart.html"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon ci-cart"></i></a><a class="navbar-tool-text" href="shop-cart.html"><small>My Cart</small>$265.00</a>
-                                <!-- Cart dropdown-->
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
-                                        <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
-                                            <div class="widget-cart-item pb-2 border-bottom">
-                                                <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                                                <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/01.jpg" width="64" alt="Product"></a>
-                                                    <div class="ps-2">
-                                                        <h6 class="widget-product-title"><a href="shop-single-v1.html">Women Colorblock Sneakers</a></h6>
-                                                        <div class="widget-product-meta"><span class="text-accent me-2">$150.<small>00</small></span><span class="text-muted">x 1</span></div>
+                                        My Account
+                                    </div>
+                                    </a>
+                                    <div class="navbar-tool dropdown ms-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="shop-cart.html"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon ci-cart"></i></a><a class="navbar-tool-text" href="shop-cart.html"><small>My Cart</small>$265.00</a>
+                                        <!-- Cart dropdown-->
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <div class="widget widget-cart px-3 pt-2 pb-3" style="width: 20rem;">
+                                                <div style="height: 15rem;" data-simplebar data-simplebar-auto-hide="false">
+                                                    <div class="widget-cart-item pb-2 border-bottom">
+                                                        <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                                                        <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/01.jpg" width="64" alt="Product"></a>
+                                                            <div class="ps-2">
+                                                                <h6 class="widget-product-title"><a href="shop-single-v1.html">Women Colorblock Sneakers</a></h6>
+                                                                <div class="widget-product-meta"><span class="text-accent me-2">$150.<small>00</small></span><span class="text-muted">x 1</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="widget-cart-item py-2 border-bottom">
+                                                        <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                                                        <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/02.jpg" width="64" alt="Product"></a>
+                                                            <div class="ps-2">
+                                                                <h6 class="widget-product-title"><a href="shop-single-v1.html">TH Jeans City Backpack</a></h6>
+                                                                <div class="widget-product-meta"><span class="text-accent me-2">$79.<small>50</small></span><span class="text-muted">x 1</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="widget-cart-item py-2 border-bottom">
+                                                        <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                                                        <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/03.jpg" width="64" alt="Product"></a>
+                                                            <div class="ps-2">
+                                                                <h6 class="widget-product-title"><a href="shop-single-v1.html">3-Color Sun Stash Hat</a></h6>
+                                                                <div class="widget-product-meta"><span class="text-accent me-2">$22.<small>50</small></span><span class="text-muted">x 1</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="widget-cart-item py-2 border-bottom">
+                                                        <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
+                                                        <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/04.jpg" width="64" alt="Product"></a>
+                                                            <div class="ps-2">
+                                                                <h6 class="widget-product-title"><a href="shop-single-v1.html">Cotton Polo Regular Fit</a></h6>
+                                                                <div class="widget-product-meta"><span class="text-accent me-2">$9.<small>00</small></span><span class="text-muted">x 1</span></div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="widget-cart-item py-2 border-bottom">
-                                                <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                                                <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/02.jpg" width="64" alt="Product"></a>
-                                                    <div class="ps-2">
-                                                        <h6 class="widget-product-title"><a href="shop-single-v1.html">TH Jeans City Backpack</a></h6>
-                                                        <div class="widget-product-meta"><span class="text-accent me-2">$79.<small>50</small></span><span class="text-muted">x 1</span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="widget-cart-item py-2 border-bottom">
-                                                <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                                                <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/03.jpg" width="64" alt="Product"></a>
-                                                    <div class="ps-2">
-                                                        <h6 class="widget-product-title"><a href="shop-single-v1.html">3-Color Sun Stash Hat</a></h6>
-                                                        <div class="widget-product-meta"><span class="text-accent me-2">$22.<small>50</small></span><span class="text-muted">x 1</span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="widget-cart-item py-2 border-bottom">
-                                                <button class="btn-close text-danger" type="button" aria-label="Remove"><span aria-hidden="true">&times;</span></button>
-                                                <div class="d-flex align-items-center"><a class="flex-shrink-0" href="shop-single-v1.html"><img src="img/shop/cart/widget/04.jpg" width="64" alt="Product"></a>
-                                                    <div class="ps-2">
-                                                        <h6 class="widget-product-title"><a href="shop-single-v1.html">Cotton Polo Regular Fit</a></h6>
-                                                        <div class="widget-product-meta"><span class="text-accent me-2">$9.<small>00</small></span><span class="text-muted">x 1</span></div>
-                                                    </div>
-                                                </div>
+                                                <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+                                                    <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">$265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
+                                                </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
                                             </div>
                                         </div>
-                                        <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
-                                            <div class="fs-sm me-2 py-2"><span class="text-muted">Subtotal:</span><span class="text-accent fs-base ms-1">$265.<small>00</small></span></div><a class="btn btn-outline-secondary btn-sm" href="shop-cart.html">Expand cart<i class="ci-arrow-right ms-1 me-n1"></i></a>
-                                        </div><a class="btn btn-primary btn-sm d-block w-100" href="checkout-details.html"><i class="ci-card me-2 fs-base align-middle"></i>Checkout</a>
                                     </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -663,16 +661,16 @@
                 </div>
             </div>
         </header>
-<?php  if(isset($_SESSION['alert'])){ ?>
-        <div class="container pt-5">
-            <div class='alert alert-<?php echo $_SESSION['alert']['type'] ?>'>
-            <?php echo  $_SESSION['alert']['message'];
-            unset($_SESSION['alert']);?>
+        <?php if (isset($_SESSION['alert'])) { ?>
+            <div class="container pt-5">
+                <div class='alert alert-<?php echo $_SESSION['alert']['type'] ?>'>
+                    <?php echo  $_SESSION['alert']['message'];
+                    unset($_SESSION['alert']); ?>
+                </div>
             </div>
-        </div>
-        <script>
-            setInterval(function(){
-                document.querySelector('.alert').classList.add('alert-out');
-            },6000)
-        </script>
+            <script>
+                setInterval(function() {
+                    document.querySelector('.alert').classList.add('alert-out');
+                }, 6000)
+            </script>
         <?php } ?>
